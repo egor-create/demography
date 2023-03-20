@@ -7,4 +7,5 @@ public class BabyCell extends CellMy {
     public BabyCell(int strata, int age, int population) {
         super(strata, age, population);
     }
+
 }

@@ -18,6 +18,10 @@ public class CellMy {
     private CellMy directNeighbour;
     private CellMy downNeighbour;
 
+    public void setDeath(int deathPopulation) {
+        this.population -= deathPopulation;
+    }
+
     public CellMy() {
     }
 

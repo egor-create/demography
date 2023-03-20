@@ -4,8 +4,10 @@ import java.io.File;
 
 import com.example.classes.cells.CellMy;
 import com.example.classes.cells.DeadCell;
+import com.example.methods.Calc;
 import com.example.methods.Init;
 import com.example.methods.Logs;
+import com.example.methods.updates.Update;
 
 public class Main {
 
@@ -16,7 +18,7 @@ public class Main {
 
         int ITERATIONS = 9;
 
-        CellMy[][] cells = Init.createCells();
+        CellMy[][] cells = Init.createAndFill();
 
         // Создание папки logs
         File logsFolder = new File("logs");
@@ -31,16 +33,20 @@ public class Main {
         int numberOfDeadInIteration1 = 0;
         int numberOfDeadInIteration2 = 0;
 
-        Logs.createLog(cells, 0, numberOfDeadInIteration2 - numberOfDeadInIteration1);
+        int totalBirth = 0;
+
+        Logs.createLog(cells, 0, numberOfDeadInIteration2 - numberOfDeadInIteration1, totalBirth);
         for (int i = 1; i <= ITERATIONS; i++) {
 
             numberOfDeadInIteration1 = DeadCell.getInstance().getNumberOfDead();
 
-            Init.calcIteration(cells);
+            Update.calcIteration(cells);
 
             numberOfDeadInIteration2 = DeadCell.getInstance().getNumberOfDead();
 
-            Logs.createLog(cells, i, (numberOfDeadInIteration2 - numberOfDeadInIteration1));
+            totalBirth += Calc.calcBirth(cells);
+
+            Logs.createLog(cells, i, (numberOfDeadInIteration2 - numberOfDeadInIteration1), totalBirth);
 
         }
 

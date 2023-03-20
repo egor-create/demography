@@ -4,9 +4,9 @@ public class Config {
     
     
     private final int strataCol = 10;
-    private final int ageFilled = 70;
+    private final int ageFilled = 100;
 
-    private final double birthRate = 0.03;
+    private final double birthRate = 0.01;
     private final double deathRate = 0.01;
     // private final double birthRate = (9.6 / 1000);
     // private final double deathRate = (1.2 / 1000);
