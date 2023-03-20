@@ -2,11 +2,8 @@ package com.example.methods.streams;
 
 import com.example.classes.cells.BorderMy;
 import com.example.classes.cells.CellMy;
-import com.example.classes.cells.DeadCell;
 import com.example.classes.cells.childs.BabyCell;
 import com.example.classes.cells.childs.TeenCell;
-
-// TODO Рождаемость > Смертность > Социальный прогресс/регресс > Старение
 
 public class Streams {
 
