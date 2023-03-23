@@ -10,7 +10,7 @@ import com.example.methods.Logs;
 import com.example.methods.updates.Update;
 
 public class Main {
-
+    // test
     public static void main(String[] args) {
 
         // TODO возомжно сделать так, чтобы все фертильное население давало нужный процент, но вопрос надо ли
